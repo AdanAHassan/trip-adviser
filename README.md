@@ -1,1 +1,1 @@
-# trip-adviser
+# trip-adviser demo page
