@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/trip-adviser/static/css/main.346754a7.css",
-    "main.js": "/trip-adviser/static/js/main.702329cc.js",
+    "main.js": "/trip-adviser/static/js/main.74b56c01.js",
     "static/js/787.15814f6d.chunk.js": "/trip-adviser/static/js/787.15814f6d.chunk.js",
     "static/media/desktop.jpg": "/trip-adviser/static/media/desktop.ce3355b6e53770b1d45d.jpg",
     "static/media/tablet.jpg": "/trip-adviser/static/media/tablet.a6a3205fe231241f9c6c.jpg",
     "index.html": "/trip-adviser/index.html",
     "main.346754a7.css.map": "/trip-adviser/static/css/main.346754a7.css.map",
-    "main.702329cc.js.map": "/trip-adviser/static/js/main.702329cc.js.map",
+    "main.74b56c01.js.map": "/trip-adviser/static/js/main.74b56c01.js.map",
     "787.15814f6d.chunk.js.map": "/trip-adviser/static/js/787.15814f6d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.346754a7.css",
-    "static/js/main.702329cc.js"
+    "static/js/main.74b56c01.js"
   ]
 }
