@@ -17,14 +17,14 @@ window.addEventListener('scroll', checkBool)
 
   return (
     <div ref={headerRef} class="max-w-[1136px] mx-auto">
-      <div class="flex items-center h-[60px] gap-2 justify-between mx-6 xl:mx-0">
+      <div class="flex items-center h-[50px] md:h-[60px] gap-2 justify-between mx-6 xl:mx-0">
         <div class="block md:hidden border-slate-700 ">
             <svg viewBox="0 0 24 24" width="24px" height="24px">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M21 7.75H3v-1.5h18v1.5zm0 5H3v-1.5h18v1.5zm0 5H3v-1.5h18v1.5z"></path>
             </svg>
         </div>
-        <div class="w-46 flex flex-none mx-auto md:grow-0">
-            <img class="w-[188px]" src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="Tripadvisor lockup horizontal secondary registered"
+        <div class="w-46 flex flex-initial mx-auto md:grow-0">
+            <img class="w-[132px] md:w-[188px]" src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="Tripadvisor lockup horizontal secondary registered"
             />
         </div>
         <div class="flex flex-row justify-end md:grow items-center gap-2 ">
@@ -40,9 +40,9 @@ window.addEventListener('scroll', checkBool)
             </div>
             <div class={`${revealBool ? "flex" : "hidden" } bg-green-900 `}>
                 <div onClick={() => setRevealBool(false)} class="fixed top-0 right-0 bg-white/90 w-full h-full"></div>
-                <div  onFocus={() => setRevealBool(true)} class="bg-white left-0 md:left-[220px] lg:left-[56px] lg:inset-x-px w-full md:w-[calc(278px+(100%/3))] lg:w-[600px] max-w-[1136px] mx-auto shrink h-fit fixed top-1.5 rounded-sm flex-initial drop-shadow-2xl pb-4 border-[1px] border-slate-400/50 ml-6">
-                    <div class="flex flex-row items-center justify-start">
-                        <div class="flex flex-row items-center pl-6 scale-75 absolute justfiy-center order-1 md:hidden">
+                <div  onFocus={() => setRevealBool(true)} class="bg-white left-0 md:left-[220px] lg:left-[56px] lg:inset-x-px w-full h-full md:h-fit md:w-[calc(278px+(100%/3))] lg:w-[600px] max-w-[1136px] mx-auto shrink h-fit fixed top-1.5 rounded-sm flex-initial drop-shadow-2xl pb-4 border-[1px] border-slate-400/50">
+                    <div class="flex flex-row items-center justify-start pl-6">
+                        <div onClick={() => setRevealBool(false)} class="flex flex-row items-center scale-75 absolute justfiy-center order-1 md:hidden hover:cursor-pointer">
                             <svg viewBox="0 0 24 24" width="24px" height="24px">
                                 <path d="M10.304 3.506l-8.048 8.047a.644.644 0 000 .895l8.048 8.047a.624.624 0 00.883 0l.882-.883a.624.624 0 000-.883l-5.481-5.48h14.714a.625.625 0 00.623-.625v-1.248a.624.624 0 00-.623-.624H6.588l5.481-5.481a.624.624 0 000-.883l-.882-.883a.623.623 0 00-.883-.004c-.001.002-.002.003 0 .005z"></path>
                             </svg>

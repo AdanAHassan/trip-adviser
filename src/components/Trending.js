@@ -55,8 +55,8 @@ const Trending = () => {
     
   return (
     <div class="flex flex-col w-full font-medium items-start gap-4 p-6 mt-12 max-w-[1136px] mx-auto">
-        <div class="text-2xl font-bold">Trending in Travel</div>
-        <div class="font-medium flex flex-row gap-10 text-md md:text-sm pb-4">
+        <div class="text-3xl font-bold">Trending in Travel</div>
+        <div class="font-medium flex flex-row w-96 justify-start gap-6 text-md pb-4 text-clip overflow-hidden">
                 <button class={`hover:underline decoration-2 underline-offset-[16px] ${gridElements && "underline"}`} onClick={toggleGridElements}>Winter Experiences</button>
                 <button class={`hover:underline decoration-2 underline-offset-[16px] ${!gridElements && "underline"}`} onClick={toggleGridElements}>Winter Destinations</button>
         </div>

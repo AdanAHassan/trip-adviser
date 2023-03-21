@@ -8,7 +8,6 @@ const ExploreSlider = ({exploreContent}) => {
      
      const scrollRef = useRef()
      let scrollChildWidth = 0
-     let maxIndex=0
 
      const handleRight = () => {
          let scrollWidth  = scrollRef.current.scrollWidth

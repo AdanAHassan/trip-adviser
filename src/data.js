@@ -185,6 +185,15 @@ export const dreamTitle = [{
     }]
 
 export const dreamContent = [
+        
+        {
+            "location": "Bristol, UK",
+            "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/4d/43/b3/bristol.jpg?w=300&h=300&s=1"
+        },
+        {
+            "location": "Torquay, UK",
+            "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/a1/22/a4/20160819-165347-largejpg.jpg?w=300&h=300&s=1"
+        },
         {
             "location": "Bournemouth, UK",
             "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/09/08/90/c5/hengistbury-head.jpg?w=300&h=300&s=1"
@@ -194,9 +203,22 @@ export const dreamContent = [
             "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/14/10/2e/0f/brighton.jpg?w=300&h=300&s=1"
         },
         {
-            "location": "Liverpool, UK",
-            "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/03/9b/2f/c7/liverpool.jpg?w=300&h=300&s=1"
-        }]
+            "location": "Windermere, UK",
+            "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0f/38/c9/b6/fall-colours-along-the.jpg?w=300&h=300&s=1"
+        },
+        {
+            "location": "Nottingham, UK",
+            "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/07/84/ad/79/nottingham-castle.jpg?w=300&h=300&s=1"
+        },
+        {
+            "location": "Sheffield, UK",
+            "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/15/33/f5/e5/sheffield.jpg?w=300&h=300&s=1"
+        },
+        {
+            "location": "Manchester, UK",
+            "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/06/3d/31/60/manchester-town-hall.jpg?w=300&h=300&s=1"
+        }
+    ]
         
 export const FoundationImage = [{
         image: "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/28/24/c0/0f/caption.jpg?w=600&h=-1&s=1&cx=1102&cy=226&chk=v1_85add2fa7da9441ef2e8",

@@ -38,21 +38,28 @@ const Search = ({setTotalHeight, totalHeight}) => {
     
   return (
     <>
-        <div class="h-80 relative mb-20  xl:mx-0 px-0 md:px-6 lg:px-0">
-            <div class="h-full">
-                <img class="brightness-100 h-full object-cover" src="https://static.tacdn.com/img2/brand/home/homemar2022_tw_trans.webp" alt="search-background" />
+        <div class={`h-80 mb-20 md:relative xl:mx-0 px-0 md:px-6 lg:px-0 ${ revealBool ? "" : "relative"}`}>
+            <div class="h-full w-full">
+                <img class="brightness-100 h-full w-full object-cover" src="https://static.tacdn.com/img2/brand/home/homemar2022_tw_trans.webp" alt="search-background" />
             </div>
             <div ref={divRef}>
                 <div onClick={() => setRevealBool(false)} class={`fixed top-0 right-0 bg-white/90 w-full  ${ revealBool ? "h-[8000px] z-50" : "" }`}>
                 </div>
-                <form  class={`bg-white top-[132px] inset-0 w-[80%] mx-auto flex flex-col shadow-xl shadow-black/40 absolute h-fit ${ revealBool ? "rounded-md z-50" : "rounded-full"}`}>
-                    <div ref={searchRef} onClick={() => setRevealBool(true)}  class="flex flex-row items-center pl-6 h-14">
-                        <svg viewBox="0 0 24 24" width="24px" height="24px">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.74 3.75a5.99 5.99 0 100 11.98 5.99 5.99 0 000-11.98zM2.25 9.74a7.49 7.49 0 1113.3 4.728l5.44 5.442-1.06 1.06-5.44-5.439A7.49 7.49 0 012.25 9.74z"></path>
-                        </svg>
+                <form  class={`bg-white md:top-[132px] inset-0 md:w-[80%] mx-auto flex flex-col shadow-xl shadow-black/40 absolute ${ revealBool ? "rounded-md z-50 w-full h-full md:w-fit top-0" : "rounded-full top-[132px] w-[80%] h-fit"}`}>
+                    <div ref={searchRef} onClick={(e) => {if(e.target !== e.currentTarget) return; setRevealBool(true)}}  class="flex flex-row items-center pl-6 h-14">
+                        <div onClick={() => {setRevealBool(false); console.log(false)}} class={`${revealBool ?  "visible ": "hidden"} flex flex-row items-center scale-75 absolute justfiy-center order-1 md:hidden hover:cursor-pointer`}>
+                            <svg viewBox="0 0 24 24" width="24px" height="24px">
+                                <path d="M10.304 3.506l-8.048 8.047a.644.644 0 000 .895l8.048 8.047a.624.624 0 00.883 0l.882-.883a.624.624 0 000-.883l-5.481-5.48h14.714a.625.625 0 00.623-.625v-1.248a.624.624 0 00-.623-.624H6.588l5.481-5.481a.624.624 0 000-.883l-.882-.883a.623.623 0 00-.883-.004c-.001.002-.002.003 0 .005z"></path>
+                            </svg>
+                        </div>
+                        <div class="flex flex-row items-center pr-6 md:pl-4 absolute justfiy-center order-last md:order-1 right-0 md:left-0 scale-75 md:scale-100">
+                            <svg viewBox="0 0 24 24" width="24px" height="24px">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.74 3.75a5.99 5.99 0 100 11.98 5.99 5.99 0 000-11.98zM2.25 9.74a7.49 7.49 0 1113.3 4.728l5.44 5.442-1.06 1.06-5.44-5.439A7.49 7.49 0 012.25 9.74z"></path>
+                            </svg>
+                        </div>
                         <input
                             onFocus={() => setRevealBool(true)} 
-                            class="mx-6 text-start justify-center my-4 focus:outline-none peer group w-full h-full"
+                            class={`mx-6 text-start justify-center focus:outline-none w-full h-16 form-input bg-transparent ${revealBool ? "pl-6" : "pl-0" } md:pl-0`}
                             type="text" 
                             value={search}
                             placeholder="Where to?"

@@ -76,8 +76,8 @@ const TemplateSlider = ({TemplateTitle, TemplateContent, TemplateId}) => {
     {
           TemplateTitle.map((item) => (
                 <div class="flex flex-col text-start items-start gap-2 pl-6 lg:pl-0 h-40 justify-end">
-                    <h1 class="text-left text-3xl text-black font-medium flex-end">{item.title}</h1>
-                    <p class="text-xl font-light">{item.subtitle}</p>
+                    <h1 class="text-left text-2xl md:text-3xl text-black font-medium flex-end">{item.title}</h1>
+                    <p class="text-lg md:text-xl font-light">{item.subtitle}</p>
                 </div>
             ))
     }
@@ -91,7 +91,6 @@ const TemplateSlider = ({TemplateTitle, TemplateContent, TemplateId}) => {
                 <div class="absolute inset-x-0 bottom-0 flex flex-col pl-4 pr-8 w-full bg-gradient-to-t from-black/80 h-1/2 pb-4 items-start justify-end">
                     <h1 class="text-left text-2xl text-white font-bold flex-end">{item.location}</h1>
                 </div>
-                
             </div>
          ))
     }

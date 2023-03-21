@@ -4,7 +4,7 @@ import desktop from "../images/desktop.jpg"
 const Award = () => {
   return (
 <div class="bg-green-900">
-    <div class="bg-green-900 text-white mt-24 flex flex-col lg:flex-row lg:h-[600px] lg:max-w-[1136px] mx-auto">
+    <div class="bg-green-900 text-white mt-24 flex flex-col lg:flex-row lg:h-[600px] lg:max-w-[1136px] mx-auto text-center">
         <div class="flex flex-col gap-4 items-center p-16 justify-center lg:w-96">
             <img class="w-32" src="https://static.tacdn.com/img2/travelers_choice/TC_logomark_solid_cream.svg" alt="traveler's choice best choice logo"/>
             <h1 class="text-4xl font-bold">Travellers' Choice Best of the Best</h1>

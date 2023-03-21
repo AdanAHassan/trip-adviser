@@ -9,7 +9,6 @@ const DreamTrip = ({dreamTitle, dreamContent}) => {
      
      const scrollRef = useRef()
      let scrollChildWidth = 0
-     let maxIndex=0
      
 //      had issues with this function but it works. The function is called by the onclick attribute and all the variables are declared here. This is because it requires the DOM to be rendered first, if declared outside the function all the variables throw an error. The issue with using state to increment was fixed by setting the state with the onscroll attribute. This is good because the state is still updated without using the button which is necessary when a user scrolls the div with their mouse
      const handleRight = () => {
@@ -19,7 +18,6 @@ const DreamTrip = ({dreamTitle, dreamContent}) => {
 //          console.log(scrollChildWidth * 3)
 //          console.log(scrollRef.current)
          let maxIndex = ((scrollRef.current.scrollWidth-scrollRef.current.offsetWidth)/(scrollRef.current.scrollWidth/scrollRef.current.childElementCount))
-         maxIndex = (scrollRef.current.scrollLeftMax/(scrollRef.current.scrollWidth/scrollRef.current.childElementCount))
          if(scrollIndex < Math.floor(maxIndex+1)){
          scrollRef.current.scrollTo({
             top: 0,
