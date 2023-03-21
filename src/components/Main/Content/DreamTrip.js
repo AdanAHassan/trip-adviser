@@ -18,8 +18,7 @@ const DreamTrip = ({dreamTitle, dreamContent}) => {
          scrollChildWidth = scrollWidth/scrollChildNum
 //          console.log(scrollChildWidth * 3)
 //          console.log(scrollRef.current)
-         let scrollLeftMax = scrollRef.current.scrollLeftMax
-         maxIndex = scrollLeftMax/scrollChildWidth
+         let maxIndex = ((scrollRef.current.scrollWidth-scrollRef.current.offsetWidth)/(scrollRef.current.scrollWidth/scrollRef.current.childElementCount))
          maxIndex = (scrollRef.current.scrollLeftMax/(scrollRef.current.scrollWidth/scrollRef.current.childElementCount))
          if(scrollIndex < Math.floor(maxIndex+1)){
          scrollRef.current.scrollTo({
@@ -54,7 +53,7 @@ const DreamTrip = ({dreamTitle, dreamContent}) => {
     }
 //     this is used to make the arrow button disappear/reappear 
     const handleRightScrollBool = () => {
-        maxIndex = (scrollRef.current.scrollLeftMax/(scrollRef.current.scrollWidth/scrollRef.current.childElementCount))
+        let maxIndex = ((scrollRef.current.scrollWidth-scrollRef.current.offsetWidth)/(scrollRef.current.scrollWidth/scrollRef.current.childElementCount))
         if (scrollIndex>=maxIndex){
             setScrollRightBool(false)
         }

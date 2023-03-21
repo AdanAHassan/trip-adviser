@@ -14,9 +14,7 @@ const HomeRentals = ({HomeRentalsContent, HomeRentalsImage}) => {
          let scrollWidth  = scrollRef.current.scrollWidth
          let scrollChildNum = scrollRef.current.childElementCount
          scrollChildWidth = scrollWidth/scrollChildNum
-         let scrollLeftMax = scrollRef.current.scrollLeftMax
-         maxIndex = scrollLeftMax/scrollChildWidth
-         maxIndex = (scrollRef.current.scrollLeftMax/(scrollRef.current.scrollWidth/scrollRef.current.childElementCount))
+         let maxIndex = ((scrollRef.current.scrollWidth-scrollRef.current.offsetWidth)/(scrollRef.current.scrollWidth/scrollRef.current.childElementCount))
          if(scrollIndex < Math.floor(maxIndex+1)){
          scrollRef.current.scrollTo({
             top: 0,
@@ -46,7 +44,7 @@ const HomeRentals = ({HomeRentalsContent, HomeRentalsImage}) => {
         console.log(scrollLeftBool)
     }
     const handleRightScrollBool = () => {
-        maxIndex = (scrollRef.current.scrollLeftMax/(scrollRef.current.scrollWidth/scrollRef.current.childElementCount))
+        let maxIndex = ((scrollRef.current.scrollWidth-scrollRef.current.offsetWidth)/(scrollRef.current.scrollWidth/scrollRef.current.childElementCount))
         if (scrollIndex>=maxIndex){
             setScrollRightBool(false)
         }
