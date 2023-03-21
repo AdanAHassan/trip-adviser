@@ -16,9 +16,9 @@ const TemplateSlider = ({TemplateTitle, TemplateContent, TemplateId}) => {
          scrollChildWidth = scrollWidth/scrollChildNum
 //          console.log(scrollChildWidth * 3)
 //          console.log(scrollRef.current)
-         let scrollLeftMax = scrollRef.current.scrollLeftMax
-         let maxIndex = scrollLeftMax/scrollChildWidth
-         maxIndex = (scrollRef.current.scrollLeftMax/(scrollRef.current.scrollWidth/scrollRef.current.childElementCount))
+//          let scrollLeftMax = scrollRef.current.scrollLeftMax
+//          let maxIndex = scrollLeftMax/scrollChildWidth
+         let maxIndex = ((scrollRef.current.scrollWidth-scrollRef.current.offsetWidth)/(scrollRef.current.scrollWidth/scrollRef.current.childElementCount))
          if(scrollIndex < Math.floor(maxIndex+1)){
          scrollRef.current.scrollTo({
             top: 0,
@@ -52,7 +52,7 @@ const TemplateSlider = ({TemplateTitle, TemplateContent, TemplateId}) => {
     }
 //     this is used to make the arrow button disappear/reappear 
     const handleRightScrollBool = () => {
-        let maxIndex = (scrollRef.current.scrollLeftMax/(scrollRef.current.scrollWidth/scrollRef.current.childElementCount))
+        let maxIndex = ((scrollRef.current.scrollWidth-scrollRef.current.offsetWidth)/(scrollRef.current.scrollWidth/scrollRef.current.childElementCount))
         if (scrollIndex>=maxIndex){
             setScrollRightBool(false)
         }
@@ -78,6 +78,7 @@ const TemplateSlider = ({TemplateTitle, TemplateContent, TemplateId}) => {
                 <div class="flex flex-col text-start items-start gap-2 pl-6 lg:pl-0 h-40 justify-end">
                     <h1 class="text-left text-3xl text-black font-medium flex-end">{item.title}</h1>
                     <p class="text-xl font-light">{item.subtitle}</p>
+                    <p>{(scrollRef.current.scrollWidth-scrollRef.current.offsetWidth)/scrollRef.current.scrollLeftMax}</p>
                 </div>
             ))
     }
