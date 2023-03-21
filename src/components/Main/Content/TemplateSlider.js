@@ -78,7 +78,6 @@ const TemplateSlider = ({TemplateTitle, TemplateContent, TemplateId}) => {
                 <div class="flex flex-col text-start items-start gap-2 pl-6 lg:pl-0 h-40 justify-end">
                     <h1 class="text-left text-3xl text-black font-medium flex-end">{item.title}</h1>
                     <p class="text-xl font-light">{item.subtitle}</p>
-                    <p>{(scrollRef.current.scrollWidth-scrollRef.current.offsetWidth)/scrollRef.current.scrollLeftMax}</p>
                 </div>
             ))
     }
