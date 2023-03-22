@@ -5,6 +5,7 @@ import Award from "./components/Award"
 import Trending from "./components/Trending"
 import {WinterCols} from "./data"
 import {useState} from "react"
+import {RecentlyViewed} from "./data"
 
 
 function App() {
@@ -23,10 +24,12 @@ window.addEventListener('scroll', calcScrollPos)
       <div class={`fixed bg-white z-40 w-full top-0 border-slate-200 ${scrollPos>0 ? "border-b-2" : "border-none"}`}>
       <Header
         totalHeight={totalHeight}
+        RecentlyViewed={RecentlyViewed}
       /></div>
       <Main
         setTotalHeight={setTotalHeight}
         totalHeight={totalHeight}
+        RecentlyViewed={RecentlyViewed}
       />
       <Award />
         <Trending 

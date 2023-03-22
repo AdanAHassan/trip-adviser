@@ -63,7 +63,7 @@ const ExploreSlider = ({exploreContent}) => {
   return (
         <div class="relative flex flex-col max-w-[1136px] mx-auto gap-4 justify-end py-6 mt-28">
                 <div class="flex flex-col items-start gap-2 pl-6 lg:pl-0 justify-end h-12">
-                    <h1 class="text-left text-2xl text-black font-medium flex-end">More to explore</h1>
+                    <h1 class="text-left text-2xl md:text-3xl text-black font-medium flex-end">More to explore</h1>
                 </div>
         <div ref={scrollRef} onScroll={() => {checkScroll(); handleRightScrollBool(); handleLeftScrollBool()}} class="flex flex-row flex-nowrap overflow-auto scrollbar-hide gap-2 w-full pl-6 lg:pl-0 h-[90%] pr-6">
     {

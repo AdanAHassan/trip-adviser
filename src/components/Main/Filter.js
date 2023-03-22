@@ -59,8 +59,6 @@ const Filter = () => {
             setScrollLeftBool(false)
         }
     }    
-    //grid grid-cols-4 bg-slate-900 gap-4 p-2 
-    // banner image and content to change on refresh
   return (
       <div class="relative">
     <div ref={scrollRef} onScroll={() => {checkScroll(); handleRightScrollBool(); handleLeftScrollBool()}} class="relative flex flex-row bg-white gap-2 w-full overflow-x-scroll scrollbar-hide md:overflow-hidden md:flex-wrap lg:flex-nowrap px-6 pt-2 pb-4 xl:px-0 text-start">

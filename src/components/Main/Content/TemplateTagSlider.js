@@ -66,8 +66,8 @@ const TemplateTagSlider = ({TemplateContent, TemplateImage}) => {
     {
           TemplateContent.map((item) => (
                 <div class="flex flex-col items-start gap-2 pl-6 xl:pl-0 h-28 justify-end">
-                    <h1 class="text-left text-3xl text-black font-medium flex-end">{item.title}</h1>
-                    <p class="text-xl font-light">{item.subtitle}</p>
+                    <h1 class="text-left text-2xl md:text-3xl text-black font-medium flex-end">{item.title}</h1>
+                    <p class="text-lg md:text-xl font-light">{item.subtitle}</p>
                 </div>
             ))
     }

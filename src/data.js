@@ -248,33 +248,6 @@ export const DestinationInspoContent = [
             button: "Learn more"
         }]
 
-export const WinterCols = [
-    {
-        content:   [
-            "London Ice Skating",
-            "England Spas",
-            "Costa Rica Beaches",
-            "Walt Disney World",
-            "France Skiing",
-            "Canary Wharf",
-            "Table Mountain",
-            "Paris Wine Bars",
-            "Blue Lagoon",
-            "Highclere Castle",
-            "Greek Island Hopping",
-            "National Space Centre",
-            "Northern Lights Cruise",
-            "London Performances",
-            "Burj Khalifa",
-            "The Making of Harry Potter Tour",
-            "Norwegian Fjord Tours",
-            "Prince Charles Cinema",
-            "Everglades Boat Tours",
-            "Seine River Gourmet Dinner Cruise"
-    ]
-    
-}]
-
 export const footerTitles = [
         {
         subtitle: [
@@ -556,7 +529,80 @@ export const YouMightLikeImage = [
             "extra": "Architectural Buildings, Religious Sites"
         }
 ]
+
+export const RecentlyViewed = [
+        {
+            "title": "Stonehenge, Windsor Castle, and Bath from London",
+            "location": "London, England",
+            "border": true
+        },
+        {
+            "title": "Spain",
+            "location": "Europe",
+            "border": true
+        },
+        {
+            "title": "Lake Tahoe (California)",
+            "location": "California, United States",
+            "border": true
+        },
+        {
+            "title": "Turkiye",
+            "location": "Europe",
+            "border": false
+        }
+]
     
+export const WinterCols = [
+        {
+          "winter": {
+              "content": [
+                    "London Ice Skating",
+                    "England Spas",
+                    "Costa Rica Beaches",
+                    "Walt Disney World",
+                    "France Skiing",
+                    "Canary Wharf",
+                    "Table Mountain",
+                    "Paris Wine Bars",
+                    "Blue Lagoon",
+                    "Highclere Castle",
+                    "Greek Island Hopping",
+                    "National Space Centre",
+                    "Northern Lights Cruise",
+                    "London Performances",
+                    "Burj Khalifa",
+                    "The Making of Harry Potter Tour",
+                    "Norwegian Fjord Tours",
+                    "Prince Charles Cinema",
+                    "Everglades Boat Tours",
+                    "Seine River Gourmet Dinner Cruise"
+                ],
+              "destinations": [
+                    "Iceland",
+                    "Greece",
+                    "Bora Bora",
+                    "Dubai",
+                    "Tromso",
+                    "Spain",
+                    "Maldives",
+                    "Goa",
+                    "Andorra",
+                    "Lisbon",
+                    "Caribbean",
+                    "Phuket",
+                    "Geneva",
+                    "Budapest",
+                    "Cebu Island",
+                    "Marrakech",
+                    "Amsterdam",
+                    "Las Vegas",
+                    "Tenerife",
+                    "Cape Verde"
+                ]
+            }  
+        }
+]
     
     
     

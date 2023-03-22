@@ -88,8 +88,8 @@ const TemplateSlider = ({TemplateTitle, TemplateContent, TemplateId}) => {
                 <div>
                     <img class="w-full object-cover object-top group-hover:opacity-80 transition duration-200 ease-in-out" src={item.image} alt={item.location}/>
                 </div>
-                <div class="absolute inset-x-0 bottom-0 flex flex-col pl-4 pr-8 w-full bg-gradient-to-t from-black/80 h-1/2 pb-4 items-start justify-end">
-                    <h1 class="text-left text-2xl text-white font-bold flex-end">{item.location}</h1>
+                <div class="absolute inset-x-0 bottom-0 flex flex-col px-2 md:px-4 pb-2 md:pb-4 w-full bg-gradient-to-t from-black/80 h-1/2 items-start justify-end">
+                    <h1 class="w-full text-left text-2xl text-white font-bold flex-end">{item.location}</h1>
                 </div>
             </div>
          ))
@@ -112,54 +112,3 @@ const TemplateSlider = ({TemplateTitle, TemplateContent, TemplateId}) => {
 }
 
 export default TemplateSlider
-
-
-
-//      useEffect(() => { 
-//       if (typeof document !== "undefined") {
-//         var scrollDiv = document.getElementById("scrollDiv")
-//         var scrollWidth = scrollDiv.clientWidth
-//         var scrollChildNum = scrollDiv.childElementCount
-//         var scrollChildWidth = scrollWidth/scrollChildNum
-//      }
-//     }, [])
-//          const handleRight = () => {
-//          console.log(scrollIndex)
-//          setScrollIndex(scrollIndex + 1)
-//          console.log(scrollIndex)
-//          scrollDiv.scrollLeft = scrollChildWidth * scrollIndex
-//     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

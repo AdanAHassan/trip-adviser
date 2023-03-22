@@ -1,9 +1,10 @@
 import { useState, useRef } from "react"
 
-const Header = ({totalHeight}) => {
+const Header = ({totalHeight, RecentlyViewed}) => {
     const headerRef = useRef()
 
     const [searchBool, setSearchBool] = useState(false)
+    const [search, setSearch] = useState("")
     
     const checkBool = () => {
         setSearchBool(window.scrollY>totalHeight)
@@ -29,30 +30,40 @@ window.addEventListener('scroll', checkBool)
         </div>
         <div class="flex flex-row justify-end md:grow items-center gap-2 ">
           <div class="buttons flex flex-row gap-4 items-center grow">
-            <div class={`hidden ${searchBool ? "md:flex" : "md:hidden" } flex w-52 items-center flex-initial bg-white grow pl-6`}>
-                <div class="flex flex-row items-center pl-4 absolute justfiy-center">
+            <div class={`hidden ${searchBool ? "md:flex" : "md:hidden" } flex flex-row w-52 items-center flex-initial bg-white grow pl-6`}>
+                <div class="flex flex-row items-center pl-4 absolute justfiy-center w-fit">
                     <svg viewBox="0 0 24 24" width="24px" height="24px">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M9.74 3.75a5.99 5.99 0 100 11.98 5.99 5.99 0 000-11.98zM2.25 9.74a7.49 7.49 0 1113.3 4.728l5.44 5.442-1.06 1.06-5.44-5.439A7.49 7.49 0 012.25 9.74z"></path>
                     </svg>
                 </div>
-                <input onFocus={() => setRevealBool(true)} class="form-input w-full rounded-full border-2 border-slate-200 py-1.5 pl-6">
+                <input onFocus={() => setRevealBool(true)} 
+                    class="form-input focus:outline-none w-full rounded-full border-2 border-slate-200 py-1.5 pl-12"
+                    type="text" 
+                    value={search}
+                    onChange={(e) => setSearch(e.target.value)}
+                >
                 </input>
             </div>
             <div class={`${revealBool ? "flex" : "hidden" } bg-green-900 `}>
                 <div onClick={() => setRevealBool(false)} class="fixed top-0 right-0 bg-white/90 w-full h-full"></div>
-                <div  onFocus={() => setRevealBool(true)} class="bg-white left-0 md:left-[220px] lg:left-[56px] lg:inset-x-px w-full h-full md:h-fit md:w-[calc(278px+(100%/3))] lg:w-[600px] max-w-[1136px] mx-auto shrink h-fit fixed top-1.5 rounded-sm flex-initial drop-shadow-2xl pb-4 border-[1px] border-slate-400/50">
+                <div  onFocus={() => setRevealBool(true)} class={`bg-white left-0 md:left-[220px] lg:left-[56px] lg:inset-x-px w-full  md:h-fit md:w-[calc(278px+(100%/3))] lg:w-[600px] max-w-[1136px] mx-auto shrink fixed ${revealBool ? "top-0 h-full" : "h-fit top-1.5" } md:top-1.5 rounded-sm flex-initial drop-shadow-2xl pb-4 border-[1px] border-slate-400/50`}>
                     <div class="flex flex-row items-center justify-start pl-6">
                         <div onClick={() => setRevealBool(false)} class="flex flex-row items-center scale-75 absolute justfiy-center order-1 md:hidden hover:cursor-pointer">
                             <svg viewBox="0 0 24 24" width="24px" height="24px">
                                 <path d="M10.304 3.506l-8.048 8.047a.644.644 0 000 .895l8.048 8.047a.624.624 0 00.883 0l.882-.883a.624.624 0 000-.883l-5.481-5.48h14.714a.625.625 0 00.623-.625v-1.248a.624.624 0 00-.623-.624H6.588l5.481-5.481a.624.624 0 000-.883l-.882-.883a.623.623 0 00-.883-.004c-.001.002-.002.003 0 .005z"></path>
                             </svg>
                         </div>
-                        <div class="flex flex-row items-center pr-6 md:pl-4 absolute justfiy-center order-last md:order-1 right-0 md:left-0 scale-75 md:scale-100">
+                        <div class={`flex flex-row items-center ${revealBool ?  "pr-6 md:pr-0": "pr-0"} md:pl-4 absolute justfiy-center order-last md:order-1 right-0 md:left-0 scale-75 md:scale-100 w-fit`}>
                             <svg viewBox="0 0 24 24" width="24px" height="24px">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.74 3.75a5.99 5.99 0 100 11.98 5.99 5.99 0 000-11.98zM2.25 9.74a7.49 7.49 0 1113.3 4.728l5.44 5.442-1.06 1.06-5.44-5.439A7.49 7.49 0 012.25 9.74z"></path>
                             </svg>
                         </div>
-                        <input class="form-input w-full bg-white py-[11px] pl-14">
+                        <input 
+                            class="form-input focus:outline-none w-full bg-white py-[11px] pl-6"
+                            type="text" 
+                            value={search}
+                            onChange={(e) => setSearch(e.target.value)}
+                        >
                         </input>
                     </div>
                     <div class="bg-black pb-0.5 mx-3">

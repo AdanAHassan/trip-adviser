@@ -6,7 +6,7 @@
         <div class="md:w-1/2">
         {item.foundation &&
             <div class="md:hidden flex flex-row pb-4">
-            <img class="w-6" src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_logoset_solid_green.svg" alt="trip advisor small green logo"/>
+            <img class="w-6 mr-4" src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_logoset_solid_green.svg" alt="trip advisor small green logo"/>
             <p>Tripadvisor Foundation</p>
             </div>
         }
