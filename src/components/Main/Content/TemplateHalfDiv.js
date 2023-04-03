@@ -10,7 +10,7 @@
             <p>Tripadvisor Foundation</p>
             </div>
         }
-            <img class="w-full aspect-square object-cover" src={item.image} alt={item.description}/>
+            <img class="w-full object-cover" src={item.image} alt={item.description}/>
             
         </div>
          ))

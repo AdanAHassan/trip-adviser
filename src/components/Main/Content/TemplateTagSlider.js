@@ -85,7 +85,7 @@ const TemplateTagSlider = ({TemplateContent, TemplateImage}) => {
                     <img class="w-full h-full group-hover:opacity-80 transition duration-200 ease-in-out " src={item.image} alt={item.header}/>
                 </div>
                 <div class="flex flex-col w-full text-start gap-2 pt-2">
-                    <div  class="flex flex-row items-start text-xs gap-2 font-medium">
+                    <div  class="flex flex-row flex-wrap items-start text-xs gap-2 font-medium">
                         {item.likely && 
                             <button class="uppercase rounded-md border-[1px] border-black px-2 py-0.5">likely to sell out</button>
                         }

@@ -16,6 +16,7 @@ window.addEventListener('scroll', checkBool)
 // lg:1024 md:768 difference is 256 pixels but i need to gain 84px width which is 1/3px per gain in screenwidth calc(514px + ((100% -768px)/3))
 // 33% -256 + 514
 
+
   return (
     <div ref={headerRef} class="max-w-[1136px] mx-auto">
       <div class="flex items-center h-[50px] md:h-[60px] gap-2 justify-between mx-6 xl:mx-0">
@@ -46,7 +47,7 @@ window.addEventListener('scroll', checkBool)
             </div>
             <div class={`${revealBool ? "flex" : "hidden" } bg-green-900 `}>
                 <div onClick={() => setRevealBool(false)} class="fixed top-0 right-0 bg-white/90 w-full h-full"></div>
-                <div  onFocus={() => setRevealBool(true)} class={`bg-white left-0 md:left-[220px] lg:left-[56px] lg:inset-x-px w-full  md:h-fit md:w-[calc(278px+(100%/3))] lg:w-[600px] max-w-[1136px] mx-auto shrink fixed ${revealBool ? "top-0 h-full" : "h-fit top-1.5" } md:top-1.5 rounded-sm flex-initial drop-shadow-2xl pb-4 border-[1px] border-slate-400/50`}>
+                <div  onFocus={() => setRevealBool(true)} class={`bg-white left-0 md:left-[220px] lg:inset-x-0 w-full mx-auto md:h-fit md:w-[calc(278px+(100%/3.333))] md:max-w-[700px] shrink fixed ${revealBool ? "top-0 h-full" : "h-fit top-1.5" } md:top-1.5 rounded-sm flex-initial drop-shadow-2xl pb-4 border-[1px] border-slate-400/50`}>
                     <div class="flex flex-row items-center justify-start pl-6">
                         <div onClick={() => setRevealBool(false)} class="flex flex-row items-center scale-75 absolute justfiy-center order-1 md:hidden hover:cursor-pointer">
                             <svg viewBox="0 0 24 24" width="24px" height="24px">

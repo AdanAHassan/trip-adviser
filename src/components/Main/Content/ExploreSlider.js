@@ -78,7 +78,7 @@ const ExploreSlider = ({exploreContent}) => {
                     </div>
                 </div>
                 <div class="flex flex-col px-10 w-full p-4 content-start justify-center hover:underline">
-                    <h1 class="text-md text-black font-medium flex-end py-1.5">{item.subtitle}</h1>
+                    <h1 class="text-md text-black text-center font-bold flex-end py-1.5">{item.subtitle}</h1>
                 </div>
             </div>
          ))
