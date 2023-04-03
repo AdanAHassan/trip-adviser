@@ -33,7 +33,7 @@ const Search = ({setTotalHeight, totalHeight, RecentlyViewed}) => {
     
   return (
     <>
-        <div class={`h-80 mb-20 md:relative xl:mx-0 px-0 md:px-6 lg:px-0 ${ revealBool ? "" : "relative"}`}>
+        <div class={`h-80 mt-4 mb-16 md:relative xl:mx-0 px-0 md:px-6 lg:px-0 ${ revealBool ? "" : "relative"}`}>
             <div class="h-full w-full">
                 <img class="brightness-100 h-full w-full object-cover" src="https://static.tacdn.com/img2/brand/home/homemar2022_tw_trans.webp" alt="search-background" />
             </div>
@@ -47,7 +47,7 @@ const Search = ({setTotalHeight, totalHeight, RecentlyViewed}) => {
                                 <path d="M10.304 3.506l-8.048 8.047a.644.644 0 000 .895l8.048 8.047a.624.624 0 00.883 0l.882-.883a.624.624 0 000-.883l-5.481-5.48h14.714a.625.625 0 00.623-.625v-1.248a.624.624 0 00-.623-.624H6.588l5.481-5.481a.624.624 0 000-.883l-.882-.883a.623.623 0 00-.883-.004c-.001.002-.002.003 0 .005z"></path>
                             </svg>
                         </div>
-                        <div class={`flex flex-row items-center ${revealBool ?  "pr-6 md:pr-0": "pr-0"} md:pl-4 absolute justfiy-center order-last md:order-1 right-0 md:left-0 scale-75 md:scale-100 w-fit`}>
+                        <div class={`flex flex-row items-center ${revealBool ?  "order-last md:order-1 scale-75 right-0 pr-6 md:pr-0 ": "left-0 pr-0 scale-100"} pl-4 absolute justfiy-center md:left-0 md:scale-100 w-fit`}>
                             <svg viewBox="0 0 24 24" width="24px" height="24px">
                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.74 3.75a5.99 5.99 0 100 11.98 5.99 5.99 0 000-11.98zM2.25 9.74a7.49 7.49 0 1113.3 4.728l5.44 5.442-1.06 1.06-5.44-5.439A7.49 7.49 0 012.25 9.74z"></path>
                             </svg>
