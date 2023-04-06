@@ -1,5 +1,5 @@
 {
-  "name": "trip-adviser",
+  "name": "trip-advisor",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -42,5 +42,5 @@
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3"
   },
-  "homepage": "http://AdanAHassan.github.io/trip-adviser"
+  "homepage": "http://AdanAHassan.github.io/trip-advisor"
 }
