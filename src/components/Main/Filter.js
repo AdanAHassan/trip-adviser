@@ -61,7 +61,7 @@ const Filter = () => {
     }    
   return (
       <div class="relative">
-    <div ref={scrollRef} onScroll={() => {checkScroll(); handleRightScrollBool(); handleLeftScrollBool()}} class="relative flex flex-row bg-white gap-2 w-full overflow-x-scroll scrollbar-hide md:overflow-hidden md:flex-wrap lg:flex-nowrap px-6 pt-2 pb-4 xl:px-0 text-start">
+    <div ref={scrollRef} onScroll={() => {checkScroll(); handleRightScrollBool(); handleLeftScrollBool()}} class="relative flex flex-row bg-white gap-2 w-full overflow-x-scroll scrollbar-hide md:overflow-hidden md:flex-wrap lg:flex-nowrap px-6 pt-2 pb-2 xl:px-0 text-start">
         <div class="text-black hover:text-white bg-white hover:bg-black transition duration-200 ease-in-out rounded-xl px-4 py-[10px] border-[1px] border-black  flex-1 flex-none flex-wrap w-[150px] md:w-[calc(25%-6px)] md:flex-none lg:grow lg:w-[calc((100%/6)-10px)] hover:fill-white cursor-pointer">
         <div class="flex flex-row justify-between items-start">
                 <p class="text-sm md:text-base font-medium">Hotels</p>

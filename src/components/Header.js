@@ -1,4 +1,7 @@
 import { useState, useRef } from "react"
+import { RxCross2 } from "react-icons/rx"
+import { BsChevronDown } from "react-icons/bs"
+
 
 const Header = ({totalHeight, RecentlyViewed}) => {
     const headerRef = useRef()
@@ -16,14 +19,140 @@ window.addEventListener('scroll', checkBool)
 // lg:1024 md:768 difference is 256 pixels but i need to gain 84px width which is 1/3px per gain in screenwidth calc(514px + ((100% -768px)/3))
 // 33% -256 + 514
 
+    const [sidebarBool, setSidebarBool] = useState(false)
+    const [sidebarBoolTwo, setSidebarBoolTwo] = useState(false)
+    const handleSidebar = () => {
+        setSidebarBool((prevState) => !prevState)
+        setSidebarBoolTwo((prevState) => !prevState)
+      }
 
+    
+    const insertArr = [
+        {
+            text: "Write a review"
+        },
+        {
+            text: "Post photos"
+        },
+        {
+            text: "Alerts"
+        },
+        {
+            text: "Trips"
+        },
+        {
+            text: "Bookings"
+        }
+    ]
+    
+      const filterArr = [
+        {
+            text: "Hotels"
+        },
+        {
+            text: "Things to do"
+        },
+        {
+            text: "Restaurants"
+        },
+        {
+            text: "Flights"
+        },
+        {
+            text: "Holiday Rentals"
+        },
+        {
+            text: "Shopping"
+        },
+        {
+            text: "Cruises"
+        },
+        {
+            text: "Car Hire"
+        },
+        {   
+            hidden: true,
+            text: "Add a Place"
+        },
+        {   
+            hidden: true,
+            text: "Travel Forum"
+        },
+        {   
+            hidden: true,
+            text: "Airlines"
+        },
+        {   
+            hidden: true,
+            text: "Travellers' Choice"
+        },
+        {   
+            hidden: true,
+            text: "Help Centre"
+        },
+        {   
+            hidden: true,
+            text: "Travel Stories"
+        },
+        {   
+            more: true,
+            text: "More"
+        }
+    ]
+    
+    const [moreButton, setMoreButton] = useState(false)
+    const handleMoreButton = () => {
+        setMoreButton((prevState) => !prevState);
+      }
+    
+    
   return (
     <div ref={headerRef} class="max-w-[1136px] mx-auto">
       <div class="flex items-center h-[50px] md:h-[60px] gap-2 justify-between mx-6 xl:mx-0">
-        <div class="block md:hidden border-slate-700 ">
+        <button onClick={() => {setSidebarBoolTwo(true); setTimeout(() => setSidebarBool(true),1)}} class="block md:hidden border-slate-700 hover:cursor-pointer">
             <svg viewBox="0 0 24 24" width="24px" height="24px">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M21 7.75H3v-1.5h18v1.5zm0 5H3v-1.5h18v1.5zm0 5H3v-1.5h18v1.5z"></path>
             </svg>
+        </button>
+        <div class={`bg-black/40 h-screen w-screen absolute top-0 left-0 flex-row transition ${sidebarBoolTwo ? "flex" : "hidden" } flex duration-1000`}>
+            <div class={`flex flex-col bg-white h-full w-96 text-start items-start overflow-y-scroll px-4 pt-14 pb-8 gap-4 ${sidebarBool ? "translate-x-[0%]" : "translate-x-[-100%]" } duration-1000`}>
+                <div onClick={() => {setSidebarBool(false); setTimeout(() => setSidebarBoolTwo(false),1000); setTimeout(() => setMoreButton(false),1500)}} class="absolute text-xl font-black top-4 left-[350px] hover:cursor-pointer"><RxCross2/></div>
+                <div class="bg-black py-2 px-4 font-medium text-center text-white rounded-full w-[90%] self-center">Sign in</div>
+                <div class="flex flex-col gap-6 text-xl pt-4 font-medium">
+                    {
+                        insertArr.map((item, index) => (
+                            <div class="pl-2 text-black hover:underline decoration-solid hover:cursor-pointer">{item.text}
+                            </div>
+                        ))
+                    }
+                </div>
+                <hr class="bg-black w-4/5"/>
+                <div class="flex flex-col gap-1 w-full">
+                    {
+                        filterArr.map((item, index) => 
+                        item.hidden
+                            ?
+                        (
+                            <div class={`text-black hover:bg-slate-200/50 rounded w-full py-2 pl-2 hover:cursor-pointer ${!moreButton && "hidden"}`}>{item.text}
+                            </div>
+                        )
+                            :
+                        item.more
+                            ?
+                        (
+                            <div onClick={handleMoreButton} class={`text-black flex flex-row items-center gap-2 hover:bg-slate-200/50 rounded w-full py-2 pl-2 hover:cursor-pointer ${moreButton && "hidden"}`}><>{item.text}</>
+                            <BsChevronDown />
+                            </div>
+                        )
+                            :
+                        (
+                            <div class={`text-black hover:bg-slate-200/50 rounded w-full py-2 pl-2 hover:cursor-pointer`}>{item.text}
+                            </div>
+                        )
+                        )
+                    }
+                </div>
+            </div>
         </div>
         <div class="w-46 flex flex-initial mx-auto md:grow-0">
             <img class="w-[132px] md:w-[188px]" src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg" alt="Tripadvisor lockup horizontal secondary registered"

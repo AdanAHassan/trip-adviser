@@ -6,17 +6,15 @@ const Search = ({setTotalHeight, totalHeight, RecentlyViewed}) => {
     const searchRef = useRef()
     const divRef = useRef()
     
-    const checkTotalHeight = () => {
+    useEffect(() => {
+        const checkTotalHeight = () => {
         if (divRef.current.offsetTop + searchRef.current.offsetTop !== totalHeight &&  divRef.current!=="undefined" && searchRef.current!=="undefined" ){
             setTotalHeight(divRef.current.offsetTop + searchRef.current.offsetTop)
         }
     }
-    useEffect(() => {
-        checkTotalHeight()
-    }, [divRef])
-    
+    checkTotalHeight()
     window.addEventListener('resize', checkTotalHeight)
-    
+    }, [divRef, setTotalHeight, totalHeight])
     
     const [revealBool, setRevealBool] = useState(false)
     
@@ -27,15 +25,15 @@ const Search = ({setTotalHeight, totalHeight, RecentlyViewed}) => {
             window.removeEventListener('scroll', calcFormHeight)
         }
     
-    if(revealBool==true && window.scrollY>(divRef.current.offsetTop + searchRef.current.offsetTop + formRef.current.getBoundingClientRect().height + 60)){
+    if(revealBool === true && window.scrollY>(divRef.current.offsetTop + searchRef.current.offsetTop + formRef.current.getBoundingClientRect().height + 60)){
         window.addEventListener('scroll', calcFormHeight)
     }
     
   return (
     <>
         <div class={`h-80 mt-4 mb-16 md:relative xl:mx-0 px-0 md:px-6 lg:px-0 ${ revealBool ? "" : "relative"}`}>
-            <div class="h-full w-full">
-                <img class="brightness-100 h-full w-full object-cover" src="https://static.tacdn.com/img2/brand/home/homemar2022_tw_trans.webp" alt="search-background" />
+            <div class="h-full w-full bg-red-300/70">
+                <img class="brightness-100 h-full w-full object-left md:object-center object-cover" src="https://static.tacdn.com/img2/brand/home/homemar2022_tw_trans.webp" alt="search-background" />
             </div>
             <div ref={divRef}>
                 <div onClick={() => setRevealBool(false)} class={`fixed top-0 right-0 bg-white/90 w-full  ${ revealBool ? "h-[8000px] z-50" : "" }`}>
