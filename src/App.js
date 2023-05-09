@@ -6,6 +6,7 @@ import Trending from "./components/Trending"
 import {WinterCols} from "./data"
 import {useState} from "react"
 import {RecentlyViewed} from "./data"
+import {filterItems} from "./data"
 
 
 function App() {
@@ -18,18 +19,23 @@ const calcScrollPos = () => {
 }
 
 window.addEventListener('scroll', calcScrollPos)
+    const [moreBool, setMoreBool] = useState(false)
 
   return (
-    <div class="App overflow-hidden w-full">
+    <div class={`${moreBool ? "h-screen md:h-full" : "" } App overflow-hidden w-full`}>
       <div class={`fixed bg-white z-40 w-full top-0 border-slate-200 ${scrollPos>0 ? "border-b-2" : "border-none"}`}>
       <Header
         totalHeight={totalHeight}
         RecentlyViewed={RecentlyViewed}
+        filterItems={filterItems}
       /></div>
       <Main
         setTotalHeight={setTotalHeight}
         totalHeight={totalHeight}
         RecentlyViewed={RecentlyViewed}
+        filterItems={filterItems}
+        moreBool={moreBool}
+        setMoreBool={setMoreBool}
       />
       <Award />
         <Trending 
